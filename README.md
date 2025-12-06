@@ -408,14 +408,5 @@ Created as an assessment project demonstrating:
 
 ---
 
-## 📞 Support
-
-For issues or questions:
-1. Check the troubleshooting section
-2. Review the API documentation
-3. Verify environment configuration
-4. Check console logs for errors
-
----
 
 **Made with ❤️ using React, Node.js, and Google Gemini AI**
