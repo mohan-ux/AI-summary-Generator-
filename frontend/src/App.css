@@ -1,0 +1,213 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bot-icon {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: 8px;
+}
+
+.app-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 18px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  position: relative;
+}
+
+.app-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #f97316);
+  border-radius: 3px;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-50%) scaleX(1.2);
+  }
+}
+
+.app-header p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.app-main {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(30px);
+  border-radius: 32px;
+  padding: 55px;
+  box-shadow: 
+    0 25px 70px rgba(139, 92, 246, 0.15),
+    0 10px 30px rgba(236, 72, 153, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  min-height: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  animation: scaleIn 0.7s ease-out 0.3s both;
+  position: relative;
+}
+
+.app-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ec4899, #8b5cf6, transparent);
+  border-radius: 32px 32px 0 0;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.app-footer {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  animation: fadeIn 1.2s ease-out 0.6s both;
+}
+
+.new-analysis-btn {
+  display: block;
+  margin: 45px auto 0;
+  padding: 18px 45px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 10px 30px rgba(139, 92, 246, 0.4),
+    0 5px 15px rgba(236, 72, 153, 0.3);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.new-analysis-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s;
+}
+
+.new-analysis-btn:hover::before {
+  left: 100%;
+}
+
+.new-analysis-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 15px 40px rgba(139, 92, 246, 0.5),
+    0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+.new-analysis-btn:active {
+  transform: translateY(-2px) scale(1);
+  box-shadow: 
+    0 10px 30px rgba(139, 92, 246, 0.4),
+    0 5px 15px rgba(236, 72, 153, 0.3);
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .app-header p {
+    font-size: 1rem;
+  }
+
+  .app-main {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .new-analysis-btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-main {
+    padding: 25px 15px;
+  }
+}

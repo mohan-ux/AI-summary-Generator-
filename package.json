@@ -1,0 +1,12 @@
+{
+  "name": "ai-meeting-summarizer",
+  "version": "1.0.0",
+  "description": "AI-powered meeting transcript analyzer",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "echo 'Starting servers...' && echo 'Backend: http://localhost:3001' && echo 'Frontend: http://localhost:3000'"
+  },
+  "keywords": ["ai", "meeting", "summarizer", "gemini"],
+  "author": "",
+  "license": "ISC"
+}
